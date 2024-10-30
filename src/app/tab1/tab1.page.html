@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Maxwell's Heroes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"><
+  <ion-list>
+    @for (hero of heroes; track hero; let i = $index) {
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [alt]="hero.first_name" [src]="hero.dp" />
+      </ion-avatar>
+      <ion-label>{{hero.first_name}} {{hero.last_name}}</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    }
+  </ion-list>
+</ion-content>
