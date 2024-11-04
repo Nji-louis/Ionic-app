@@ -92,6 +92,7 @@ export class DataService {
 
   async handle_loading() {
     this.loader = await this.loadingController.create({
+      message: 'Contacting Server...',
 
     });
     await this.loader.present();
